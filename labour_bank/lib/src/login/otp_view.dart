@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:labour_bank/src/home_screen/home_screen_view.dart';
 
 class OtpView extends StatelessWidget {
   const OtpView({Key? key}) : super(key: key);
@@ -90,7 +91,12 @@ class OtpView extends StatelessWidget {
                 child: SizedBox(
                   width: 250,
                   child: ElevatedButton(
-                      onPressed: () => {},
+                      onPressed: () => {
+                            Navigator.restorablePushNamed(
+                              context,
+                              HomeScreenView.routeName,
+                            )
+                          },
                       child: const Text(
                         "Verify",
                         style: TextStyle(color: Colors.white),

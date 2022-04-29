@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:labour_bank/src/home_screen/home_screen_view.dart';
 import 'package:labour_bank/src/login/login_view.dart';
 import 'package:labour_bank/src/login/otp_view.dart';
 
@@ -72,6 +73,8 @@ class MyApp extends StatelessWidget {
                     return SettingsView(controller: settingsController);
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
+                  case HomeScreenView.routeName:
+                    return const HomeScreenView();
                   case OtpView.routeName:
                     return const OtpView();
                   default:
