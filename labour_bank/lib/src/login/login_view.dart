@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:labour_bank/src/login/otp_view.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -34,7 +35,12 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 280,
               child: ElevatedButton(
-                  onPressed: () => {},
+                  onPressed: () => {
+                        Navigator.restorablePushNamed(
+                          context,
+                          OtpView.routeName,
+                        )
+                      },
                   style: ElevatedButton.styleFrom(
                     primary: const Color.fromARGB(255, 15, 7, 119),
                   ),
