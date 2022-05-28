@@ -5,7 +5,6 @@ import 'package:labour_bank/src/home_screen/home_screen_view.dart';
 import 'package:labour_bank/src/login/login_view.dart';
 import 'package:labour_bank/src/login/otp_view.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -58,8 +57,9 @@ class MyApp extends StatelessWidget {
           // Define a light and dark color theme. Then, read the user's
           // preferred ThemeMode (light, dark, or system default) from the
           // SettingsController to display the correct theme.
-          theme: ThemeData(),
+          theme: ThemeData(primaryColor: Colors.purple.shade600),
           darkTheme: ThemeData.dark(),
+
           themeMode: settingsController.themeMode,
 
           // Define a function to handle named routes in order to support
@@ -71,8 +71,6 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
                   case HomeScreenView.routeName:
                     return const HomeScreenView();
                   case OtpView.routeName:
