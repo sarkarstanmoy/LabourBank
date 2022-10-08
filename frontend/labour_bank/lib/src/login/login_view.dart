@@ -15,15 +15,13 @@ class Login extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(children: [
             Image.asset('assets/images/logo.jpeg'),
-            const Align(
+            Align(
               alignment: AlignmentDirectional.centerStart,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(60, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
                 child: Text(
                   "Phone Number",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 65, 56, 196),
-                      fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
             ),
@@ -41,30 +39,25 @@ class Login extends StatelessWidget {
                           OtpView.routeName,
                         )
                       },
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 15, 7, 119),
-                  ),
-                  child: const Text(
+                  child: Text(
                     "Submit Phone Number",
-                    style: TextStyle(color: Colors.white),
+                    style: Theme.of(context).textTheme.bodyText1,
                   )),
             ),
-            const Align(
+            Align(
               alignment: AlignmentDirectional.center,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Text(
                   "Have a referral code?",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 65, 56, 196),
-                      fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
               ),
             ),
             const Align(
               alignment: AlignmentDirectional.center,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Text(
                   "Looking to hire staff? Click here",
                   style: TextStyle(
