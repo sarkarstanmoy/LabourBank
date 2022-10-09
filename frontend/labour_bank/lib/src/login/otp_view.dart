@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:labour_bank/src/home_screen/home_screen_view.dart';
+import 'package:labour_bank/src/common/widgets/bottom_navigation.dart';
+import 'package:labour_bank/src/add_profile/add_profile_view.dart';
 
 class OtpView extends StatelessWidget {
   const OtpView({Key? key}) : super(key: key);
@@ -105,7 +106,7 @@ class OtpView extends StatelessWidget {
                       onPressed: () => {
                             Navigator.restorablePushNamed(
                               context,
-                              HomeScreenView.routeName,
+                              BottomNavigationWidget.routeName,
                             )
                           },
                       child: Text(

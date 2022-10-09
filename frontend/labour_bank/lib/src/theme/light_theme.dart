@@ -27,7 +27,7 @@ ThemeData customlighttheme() {
           AppBarTheme(backgroundColor: CustomLightColors.primaryColorVariant),
       textTheme: GoogleFonts.robotoTextTheme().copyWith(
           headline6: TextStyle(
-            color: CustomLightColors.secondaryColor,
+            color: CustomLightColors.primaryColorVariant,
           ),
           headline5: TextStyle(
               color: CustomLightColors.secondaryColor,

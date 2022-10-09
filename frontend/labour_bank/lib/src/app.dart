@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:labour_bank/src/home_screen/home_screen_view.dart';
+import 'package:labour_bank/src/add_profile/add_profile_view.dart';
+import 'package:labour_bank/src/home_screen/home_view.dart';
 import 'package:labour_bank/src/login/login_view.dart';
 import 'package:labour_bank/src/login/otp_view.dart';
 import 'package:labour_bank/src/theme/dark_theme.dart';
 import 'package:labour_bank/src/theme/light_theme.dart';
 
+import 'common/widgets/bottom_navigation.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -73,10 +75,14 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case HomeScreenView.routeName:
-                    return const HomeScreenView();
+                  case AddProfileView.routeName:
+                    return const AddProfileView();
+                  case HomeView.routeName:
+                    return const HomeView();
                   case OtpView.routeName:
                     return const OtpView();
+                  case BottomNavigationWidget.routeName:
+                    return const BottomNavigationWidget();
                   default:
                     return const Login();
                 }
