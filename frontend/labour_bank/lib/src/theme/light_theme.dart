@@ -12,7 +12,7 @@ ThemeData customlighttheme() {
       buttonTheme: ButtonThemeData(buttonColor: CustomLightColors.primaryColor),
       backgroundColor: CustomLightColors.secondaryColor,
       iconTheme: IconThemeData(color: CustomLightColors.secondaryColor),
-      cardTheme: CardTheme(color: CustomLightColors.secondaryColor),
+      cardTheme: CardTheme(color: CustomLightColors.primaryColorVariant),
       dividerTheme: DividerThemeData(
           color: CustomLightColors.secondaryColor, thickness: 1, space: 30),
       elevatedButtonTheme: ElevatedButtonThemeData(

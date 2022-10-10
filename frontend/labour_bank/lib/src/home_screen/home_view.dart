@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:labour_bank/src/common/widgets/home_screen_card_view.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -21,93 +23,70 @@ class _HomeViewState extends State<HomeView> {
           title: Text(
             "Labour Bank",
             style:
-                Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 24),
+                Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 24),
           ),
-          backgroundColor: const Color(0xff0f0777),
           elevation: 20,
           shadowColor: const Color(0xff721c80),
         ),
-        body: Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              colors: [Color(0xff0f0777), Color(0xff721c80)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            )),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        height: 100,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                              child: Text(
-                                "Open positions for cook",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyMedium
-                                    ?.copyWith(
-                                        fontSize: 20,
-                                        fontStyle: FontStyle.italic),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        height: 100,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                              child: Text(
-                                "XYZ restaurants looking for managers",
-                                style: Theme.of(context).textTheme.bodyMedium,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10)),
-                        height: 100,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                              child: Text(
-                                "Now you can pay using GPay. Click here",
-                                style: Theme.of(context).textTheme.bodyMedium,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
+        body: SingleChildScrollView(
+          child: Container(
+              decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                colors: [Color(0xffffffff), Color(0xff051177)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              )),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Column(
+                    children: [
+                      Lottie.asset('assets/restaurant.json',
+                          height: 200, fit: BoxFit.fill),
+                      cardview(
+                          const Text('Recent update'),
+                          Text(
+                            'Open positions for cooks',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          Text(
+                            'Restaurants are looking for cooks. Apply Now.',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          const Text('MORE INFO')),
+                      cardview(
+                          const Text('Recent update'),
+                          Text(
+                            'Open positions for managers',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          Text(
+                            'XYZ restaurants are looking for managers. Apply Now.',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          const Text('MORE INFO')),
+                      cardview(
+                          const Text('Recent update'),
+                          Text(
+                            'GPay is available',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          Text(
+                            'Now you can use GPay for payments',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.6)),
+                          ),
+                          const Text('MORE INFO')),
+                    ],
+                  ),
                 ),
-              ),
-            )),
+              )),
+        ),
       ),
     );
   }
