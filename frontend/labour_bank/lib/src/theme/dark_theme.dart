@@ -1,43 +1,29 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../helpers/custom_dark_colors.dart';
 
 ThemeData customdarktheme() {
-  return ThemeData.dark().copyWith(
-      hintColor: const Color.fromARGB(100, 224, 224, 224),
-      useMaterial3: true,
-      iconTheme: IconThemeData(color: CustomDarkColors.secondaryColor),
-      cardTheme: CardTheme(color: CustomDarkColors.secondaryColor),
-      primaryColor: CustomDarkColors.primaryColor,
-      backgroundColor: const Color.fromARGB(100, 224, 224, 224),
-      dividerTheme: DividerThemeData(
-          color: CustomDarkColors.secondaryColor, thickness: 1, space: 30),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-              primary: CustomDarkColors.primaryColor,
-              onPrimary: CustomDarkColors.secondaryColor,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              textStyle:
-                  const TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
-      // appBarTheme: AppBarTheme(backgroundColor: CustomDarkColors.primaryColor),
-      textTheme: GoogleFonts.robotoTextTheme().copyWith(
-        headline4: TextStyle(color: CustomDarkColors.secondaryColor),
-        headline5: TextStyle(color: CustomDarkColors.primaryColor),
-        headline6: const TextStyle(fontWeight: FontWeight.bold),
-        subtitle1: TextStyle(
-            color: CustomDarkColors.primaryColor, fontWeight: FontWeight.bold),
-        subtitle2: TextStyle(color: CustomDarkColors.secondaryColor),
-        bodyText2: TextStyle(color: CustomDarkColors.textColor2),
-        bodyText1: TextStyle(color: CustomDarkColors.textColor1),
-        caption: TextStyle(
-            foreground: Paint()..color = CustomDarkColors.secondaryColor),
-      ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
-          elevation: 1,
-          foregroundColor: CustomDarkColors.secondaryColor,
-          backgroundColor: CustomDarkColors.primaryColor),
-      colorScheme:
-          ColorScheme.fromSwatch().copyWith(secondary: Colors.deepOrange));
+  return FlexThemeData.dark(
+    colors: const FlexSchemeColor(
+      primary: Color(0xffbbcae5),
+      primaryContainer: Color(0xff577cbf),
+      secondary: Color(0xffe9bfbf),
+      secondaryContainer: Color(0xffcb6060),
+      tertiary: Color(0xffdde5f5),
+      tertiaryContainer: Color(0xff7297d9),
+      appBarColor: Color(0xffdde5f5),
+      error: null,
+    ),
+    surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
+    blendLevel: 15,
+    appBarOpacity: 0.90,
+    subThemesData: const FlexSubThemesData(
+      blendOnLevel: 30,
+      cardRadius: 19.0,
+    ),
+    useMaterial3ErrorColors: true,
+    visualDensity: FlexColorScheme.comfortablePlatformDensity,
+    useMaterial3: true,
+    // To use the playground font, add GoogleFonts package and uncomment
+    // fontFamily: GoogleFonts.notoSans().fontFamily,
+  );
 }

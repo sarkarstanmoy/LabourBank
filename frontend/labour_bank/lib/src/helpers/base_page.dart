@@ -14,7 +14,6 @@ abstract class BasePage extends StatelessWidget {
         child: Container(
             width: mediaQuery.size.width,
             height: mediaQuery.size.height,
-            color: Colors.white,
             child: SingleChildScrollView(
               child: Column(
                 children: [

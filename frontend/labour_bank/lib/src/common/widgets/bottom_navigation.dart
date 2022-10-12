@@ -46,38 +46,38 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   Widget build(BuildContext context) {
     return Stack(children: [
       Scaffold(
-          bottomNavigationBar: CurvedNavigationBar(
-            backgroundColor: Theme.of(context).primaryColor,
+          bottomNavigationBar: BottomNavigationBar(
             items: const [
-              Icon(
-                Icons.home_outlined,
-                color: Colors.black,
-              ),
-              Icon(
-                Icons.search,
-                color: Colors.black,
-              ),
-              Icon(
-                Icons.person_add_alt_1_outlined,
-                color: Colors.black,
-              ),
-              Icon(
-                Icons.settings,
-                color: Colors.black,
-              ),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home_outlined,
+                  ),
+                  label: "HOME"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  label: "SEARCH"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.person_add_alt_1_outlined,
+                  ),
+                  label: "PROFILE"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.settings,
+                  ),
+                  label: "SETTINGS"),
             ],
             onTap: (int tappedPage) {
               setState(() {
                 _showPage = _pageChooser(tappedPage);
+                pageIndex = tappedPage;
               });
             },
+            currentIndex: pageIndex,
           ),
-          body: Container(
-            color: Colors.transparent,
-            child: Center(
-              child: _showPage,
-            ),
-          )),
+          body: _showPage),
     ]);
   }
 }

@@ -111,21 +111,15 @@ class OtpView extends StatelessWidget {
                           },
                       child: Text(
                         "Verify",
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).primaryTextTheme.bodyText1,
                       )),
                 ),
               ),
               const Text(
                 "You are already registerd",
-                style: TextStyle(
-                    color: Color.fromARGB(255, 70, 166, 190),
-                    fontWeight: FontWeight.bold),
               ),
               const Text(
                 "Please enter OTP to move ahead",
-                style: TextStyle(
-                    color: Color.fromARGB(255, 70, 166, 190),
-                    fontWeight: FontWeight.bold),
               ),
               Padding(
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),

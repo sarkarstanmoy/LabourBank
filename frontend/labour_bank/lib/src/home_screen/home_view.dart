@@ -17,76 +17,32 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          centerTitle: true,
-          title: Text(
-            "Labour Bank",
-            style:
-                Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 24),
-          ),
-          elevation: 20,
-          shadowColor: const Color(0xff721c80),
-        ),
         body: SingleChildScrollView(
-          child: Container(
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                colors: [Color(0xffffffff), Color(0xff051177)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              )),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(
-                  child: Column(
-                    children: [
-                      Lottie.asset('assets/restaurant.json',
-                          height: 200, fit: BoxFit.fill),
-                      cardview(
-                          const Text('Recent update'),
-                          Text(
-                            'Open positions for cooks',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          Text(
-                            'Restaurants are looking for cooks. Apply Now.',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          const Text('MORE INFO')),
-                      cardview(
-                          const Text('Recent update'),
-                          Text(
-                            'Open positions for managers',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          Text(
-                            'XYZ restaurants are looking for managers. Apply Now.',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          const Text('MORE INFO')),
-                      cardview(
-                          const Text('Recent update'),
-                          Text(
-                            'GPay is available',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          Text(
-                            'Now you can use GPay for payments',
-                            style:
-                                TextStyle(color: Colors.black.withOpacity(0.6)),
-                          ),
-                          const Text('MORE INFO')),
-                    ],
+            child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Welcome to",
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.people))
+                ],
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "LabourBank",
+                  style: Theme.of(context).textTheme.headline4,
                 ),
-              )),
-        ),
+              )
+            ],
+          ),
+        )),
       ),
     );
   }
