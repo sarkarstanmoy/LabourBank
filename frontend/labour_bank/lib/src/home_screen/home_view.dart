@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:labour_bank/src/common/widgets/home_screen_card_view.dart';
-import 'package:lottie/lottie.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -25,19 +21,33 @@ class _HomeViewState extends State<HomeView> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Welcome to",
-                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                        color: Colors.black, fontWeight: FontWeight.bold),
+                  SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("assets/images/logo-transparent.png")),
+                  SvgPicture.asset(
+                    "assets/images/avatar.svg",
+                    height: 50,
+                    width: 50,
+                    alignment: Alignment.topCenter,
                   ),
-                  IconButton(onPressed: () {}, icon: const Icon(Icons.people))
                 ],
               ),
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Text(
-                  "LabourBank",
-                  style: Theme.of(context).textTheme.headline4,
+                  "Connect with Restaurants and Find your dream job",
+                  style:
+                      Theme.of(context).primaryTextTheme.bodyMedium?.copyWith(
+                            color: Theme.of(context).colorScheme.tertiary,
+                          ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 20, 8, 8),
+                child: SvgPicture.asset(
+                  "assets/images/connect.svg",
+                  alignment: Alignment.topCenter,
                 ),
               )
             ],

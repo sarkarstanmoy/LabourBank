@@ -17,8 +17,6 @@ class BottomNavigationWidget extends StatefulWidget {
 int pageIndex = 0;
 HomeView _homePage = const HomeView();
 ////final SearchPage _search = SearchPage();
-AddProfileView _addprofile = const AddProfileView();
-//final ProfilePage _profile = ProfilePage();
 
 Widget _showPage = const HomeView();
 
@@ -29,12 +27,6 @@ Widget _pageChooser(int page) {
 
     // case 1:
     //   return _search;
-
-    case 2:
-      return _addprofile;
-
-    // case 3:
-    //   return _streamingDevices;
 
     default:
       return _homePage;
@@ -57,17 +49,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
                   icon: Icon(
                     Icons.search,
                   ),
-                  label: "SEARCH"),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person_add_alt_1_outlined,
-                  ),
-                  label: "PROFILE"),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.settings,
-                  ),
-                  label: "SETTINGS"),
+                  label: "SEARCH")
             ],
             onTap: (int tappedPage) {
               setState(() {

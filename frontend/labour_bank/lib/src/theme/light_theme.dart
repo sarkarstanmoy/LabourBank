@@ -30,25 +30,25 @@ ThemeData customlighttheme() {
     visualDensity: FlexColorScheme.comfortablePlatformDensity,
     useMaterial3: true,
     fontFamily: GoogleFonts.notoSans().fontFamily,
-    textTheme: GoogleFonts.notoSansTextTheme().copyWith(
-        headline6: TextStyle(
-          color: CustomLightColors.primaryColor,
-        ),
-        headline5: TextStyle(
-            color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
-        headline4: TextStyle(
-            color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
-        headline3: TextStyle(
-            color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
-        subtitle1: TextStyle(
-            color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
-        subtitle2: TextStyle(color: CustomLightColors.primaryColor),
-        bodyText2: TextStyle(
-            color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
-        bodyText1: TextStyle(color: CustomLightColors.primaryColor),
-        caption: TextStyle(
-            foreground: Paint()..color = CustomLightColors.primaryColor),
-        overline: TextStyle(
-            foreground: Paint()..color = CustomLightColors.primaryColor)),
+    // textTheme: GoogleFonts.notoSansTextTheme().copyWith(
+    //     headline6: TextStyle(
+    //       color: CustomLightColors.primaryColor,
+    //     ),
+    //     headline5: TextStyle(
+    //         color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
+    //     headline4: TextStyle(
+    //         color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
+    //     headline3: TextStyle(
+    //         color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
+    //     subtitle1: TextStyle(
+    //         color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
+    //     subtitle2: TextStyle(color: CustomLightColors.primaryColor),
+    //     bodyText2: TextStyle(
+    //         color: CustomLightColors.primaryColor, fontWeight: FontWeight.bold),
+    //     bodyText1: TextStyle(color: CustomLightColors.primaryColor),
+    //     caption: TextStyle(
+    //         foreground: Paint()..color = CustomLightColors.primaryColor),
+    //     overline: TextStyle(
+    //         foreground: Paint()..color = CustomLightColors.primaryColor)),
   );
 }
