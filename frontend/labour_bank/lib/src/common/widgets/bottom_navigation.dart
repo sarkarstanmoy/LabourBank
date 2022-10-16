@@ -59,7 +59,10 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             },
             currentIndex: pageIndex,
           ),
-          body: _showPage),
+          body: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: _showPage,
+          )),
     ]);
   }
 }
